@@ -2,9 +2,9 @@
 react + express + nodejs + MongoDB boilerplate with a lot of pre-installed automation tools 
 
 # Global packages need to be installed 
-Install parcel
+Install parcel and gulp
 ```
-npm install -g parcel-bundler
+npm install -g parcel-bundler gulp-cli
 ```
 
 # What's pre-packaged
