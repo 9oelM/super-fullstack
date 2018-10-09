@@ -1,6 +1,6 @@
 module.exports = {
-  "modules": true,
-  "plugins": {
-    "autoprefixer": true
-  }
+  modules: true,
+  plugins: {
+    autoprefixer: true,
+  },
 }
