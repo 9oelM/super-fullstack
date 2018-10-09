@@ -8,6 +8,8 @@ public/
 dist/
 ## parcel cache
 .cache/
+## log files
+*.log
 
 # User-specific files
 *.suo
