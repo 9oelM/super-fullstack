@@ -1,0 +1,19 @@
+{
+  "name": "super-fullstack",
+  "version": "1.0.0",
+  "description": "react + express + nodejs + MongoDB boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/9oelM/super-fullstack.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/9oelM/super-fullstack/issues"
+  },
+  "homepage": "https://github.com/9oelM/super-fullstack#readme"
+}
