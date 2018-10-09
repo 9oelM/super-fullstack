@@ -27,16 +27,16 @@ const lint = () => gulp
     .pipe(eslint.format())
   // To have the process exit with an error code (1) on
   // lint error, return the stream and pipe to failAfterError last.
-    .pipe(eslint.failAfterError())
+  //  .pipe(eslint.failAfterError()) --> commented out because it can cause error to the next gulp task that receives error code
 
-const dev = () => run("npm run dev")()
+const dev = run("npm run dev")
 
-const build = () => run("npm run build")()
+const build = run("npm run build")
 /*
     generic functions
 */
 
-function watch() {
+const watch = () => {
   const watchers = [gulp.watch(paths.js, format), gulp.watch(paths.js, lint)]
   watchers.forEach(watcher => watcher.on('change', (path, stats) => {
     console.log(`${path} was changed`);
@@ -47,6 +47,6 @@ function watch() {
     tasks
 */
 exports.watch = watch
-exports.dev = dev()
+exports.dev = dev
 exports.build = gulp.series(format, lint, build)
 exports.default = gulp.parallel(watch)
