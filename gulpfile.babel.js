@@ -52,7 +52,7 @@ const backDev = () => {
   })
 }
 
-const build = run(`NODE_ENV=production parcel -p ${ports.FRONT_PORT} build client/index.html --out-dir build`)
+const frontBuild = run(`npm run build`)
 
 const watch = () => {
   const watchers = [gulp.watch(paths.js, format), gulp.watch(paths.js, lint)]
@@ -68,6 +68,6 @@ const watch = () => {
 exports.watch = watch
 exports.frontDev = frontDev
 exports.backDev = backDev
-exports.dev = gulp.parallel(frontDev, backDev)
-exports.build = gulp.series(format, lint, build)
-exports.default = gulp.parallel(frontDev)
+exports.dev = gulp.parallel(watch, frontDev, backDev)
+exports.build = gulp.series(format, lint, gulp.parallel(frontBuild, backDev))
+exports.default = gulp.parallel(watch, frontDev, backDev)
