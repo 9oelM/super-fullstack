@@ -37,7 +37,8 @@ module.exports = Object.assign({}, eslintConfigAirbnb, {
         "arrow-body-style": warn,
       },
       "globals": {
-        "document": true
+        "document": true,
+        "fetch": true
       }
     }
   ]
