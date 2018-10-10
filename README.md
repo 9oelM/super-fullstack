@@ -3,13 +3,13 @@
 
 # Table of contents
 * [Global packages need to be installed](#global-packages-need-to-be-installed)
-* [What's pre-packaged](#what's-pre-packaged)
+* [What's pre-packaged](#whats-pre-packaged)
     * [Frontend](#frontend)
     * [Backend](#backend)
     * [Testing](#testing)
-    * [Automation & CI](#automation-&-ci)
+    * [Automation & CI](#automation--ci)
 * [How this thing works](#how-this-thing-works)
-    * [C9 compatible(?)](#c9-compatible(?))
+    * [C9 compatible(?)](#c9-compatible)
     * [Development](#development)
     * [Proxy](#proxy)
     * [Why port 8080 and 8081](#why-port-8080-8081)
