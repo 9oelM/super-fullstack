@@ -1,4 +1,4 @@
-# `super-fullstack`
+# `super-fullstack` :boom:
 `react` + `express` + `nodejs` + `MongoDB` boilerplate with pre-configured automation tools 
 
 # Table of contents
@@ -54,6 +54,8 @@ npm install -g parcel-bundler gulp-cli
 
 ## C9 compatible(?)
 Yeah I'm in a military base right now, so I cannot run anything locally. So I needed to make this work for [c9](https://c9.io) environment. 
+
+But you can also use this for just a normal project running locally as well!
 
 ## Development
 * Frontend: Codes run at the port 8080, using `parcel`'s server.
