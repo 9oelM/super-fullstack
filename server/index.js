@@ -1,7 +1,8 @@
 const proxy = require("http-proxy-middleware")
 const Bundler = require("parcel-bundler")
-const express = require("express")
-
+const app = require("express")()
+const port = process.env.BACK_PORT || 8081
+/*
 let bundler = new Bundler("client/index.html")
 
 let app = express()
@@ -14,9 +15,16 @@ app.use(
   })
 )
 app.use(bundler.middleware())
+*/
+app.use(function(req, res, next) {
+   res.header("Access-Control-Allow-Origin", "*");
+   res.header('Access-Control-Allow-Methods', 'DELETE, PUT, GET, POST');
+   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+   next();
+});
 
-app.get("/api", function(req, res) {
-  res.send("<html><body><h1>Hello World</h1></body></html>")
+app.get("/hello", function(req, res) {
+  res.send({data: `Hello from backend running at ${port}`})
 })
 
-app.listen(8081, () => console.log(`Listening`))
+app.listen(port, () => console.log(`Express: Listening at ${port}`))
