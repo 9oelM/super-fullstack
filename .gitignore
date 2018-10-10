@@ -6,8 +6,9 @@
 # My configs 
 public/
 dist/
+build/
 ## parcel cache
-.cache/
+*cache/*
 ## log files
 *.log
 
